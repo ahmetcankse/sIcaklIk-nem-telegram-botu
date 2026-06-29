@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <style>
+      .bg { fill: #f7f9fb; }
+      .title { font: 700 34px Arial, Helvetica, sans-serif; fill: #18212f; }
+      .subtitle { font: 400 18px Arial, Helvetica, sans-serif; fill: #526072; }
+      .label { font: 700 18px Arial, Helvetica, sans-serif; fill: #18212f; }
+      .small { font: 500 14px Arial, Helvetica, sans-serif; fill: #2a3444; }
+      .tiny { font: 500 12px Arial, Helvetica, sans-serif; fill: #556273; }
+      .board { fill: #1f7a6d; stroke: #14564d; stroke-width: 3; }
+      .module { fill: #ffffff; stroke: #2a3444; stroke-width: 2.5; }
+      .screen { fill: #7cc7ff; stroke: #2672a3; stroke-width: 3; }
+      .sensor { fill: #f5c15f; stroke: #9f6a17; stroke-width: 2.5; }
+      .pin { fill: #f3f6fa; stroke: #526072; stroke-width: 1.5; }
+      .pinText { font: 700 13px Arial, Helvetica, sans-serif; fill: #18212f; }
+      .wirePower { stroke: #d62828; stroke-width: 5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .wireGnd { stroke: #222222; stroke-width: 5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .wireSda { stroke: #168aad; stroke-width: 5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .wireScl { stroke: #7b2cbf; stroke-width: 5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .wireData { stroke: #f77f00; stroke-width: 5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .legendBox { fill: #ffffff; stroke: #d7dee8; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1400" height="900"/>
+
+  <text class="title" x="70" y="70">ESP32-WROOM Sicaklik ve Nem Devresi</text>
+  <text class="subtitle" x="70" y="102">16x2 I2C LCD + DHT11/DHT22 sensör + Telegram destekli izleme projesi</text>
+
+  <!-- ESP32 board -->
+  <rect class="board" x="500" y="165" width="360" height="570" rx="22"/>
+  <rect x="610" y="130" width="140" height="54" rx="10" fill="#c9d3de" stroke="#6c7682" stroke-width="2"/>
+  <text class="small" x="637" y="163">USB</text>
+  <rect x="590" y="225" width="180" height="210" rx="12" fill="#155f56" stroke="#0f453f" stroke-width="2"/>
+  <text class="label" x="596" y="320" fill="#ffffff">ESP32-WROOM</text>
+  <text class="tiny" x="618" y="348" fill="#dcefeb">Development Board</text>
+
+  <!-- ESP32 pins left -->
+  <rect class="pin" x="460" y="230" width="90" height="32" rx="5"/>
+  <text class="pinText" x="481" y="251">5V/VIN</text>
+  <rect class="pin" x="460" y="290" width="90" height="32" rx="5"/>
+  <text class="pinText" x="489" y="311">GND</text>
+  <rect class="pin" x="460" y="350" width="90" height="32" rx="5"/>
+  <text class="pinText" x="480" y="371">GPIO21</text>
+  <rect class="pin" x="460" y="410" width="90" height="32" rx="5"/>
+  <text class="pinText" x="480" y="431">GPIO22</text>
+
+  <!-- ESP32 pins right -->
+  <rect class="pin" x="810" y="270" width="90" height="32" rx="5"/>
+  <text class="pinText" x="837" y="291">3V3</text>
+  <rect class="pin" x="810" y="330" width="90" height="32" rx="5"/>
+  <text class="pinText" x="839" y="351">GND</text>
+  <rect class="pin" x="810" y="390" width="90" height="32" rx="5"/>
+  <text class="pinText" x="834" y="411">GPIO4</text>
+
+  <!-- LCD module -->
+  <rect class="module" x="80" y="205" width="310" height="230" rx="14"/>
+  <text class="label" x="157" y="242">16x2 LCD I2C</text>
+  <rect class="screen" x="110" y="270" width="250" height="95" rx="8"/>
+  <text class="small" x="137" y="313">Sicaklik: 24.6C</text>
+  <text class="small" x="164" y="344">Nem: 48.3%</text>
+  <rect class="pin" x="330" y="455" width="70" height="28" rx="5"/>
+  <text class="pinText" x="348" y="474">VCC</text>
+  <rect class="pin" x="330" y="495" width="70" height="28" rx="5"/>
+  <text class="pinText" x="348" y="514">GND</text>
+  <rect class="pin" x="330" y="535" width="70" height="28" rx="5"/>
+  <text class="pinText" x="348" y="554">SDA</text>
+  <rect class="pin" x="330" y="575" width="70" height="28" rx="5"/>
+  <text class="pinText" x="349" y="594">SCL</text>
+
+  <!-- DHT sensor -->
+  <rect class="sensor" x="1020" y="255" width="230" height="260" rx="20"/>
+  <text class="label" x="1064" y="296">DHT11/DHT22</text>
+  <text class="small" x="1075" y="322">Sicaklik + Nem</text>
+  <circle cx="1075" cy="365" r="12" fill="#8b5a14"/>
+  <circle cx="1125" cy="365" r="12" fill="#8b5a14"/>
+  <circle cx="1175" cy="365" r="12" fill="#8b5a14"/>
+  <circle cx="1075" cy="415" r="12" fill="#8b5a14"/>
+  <circle cx="1125" cy="415" r="12" fill="#8b5a14"/>
+  <circle cx="1175" cy="415" r="12" fill="#8b5a14"/>
+  <rect class="pin" x="965" y="555" width="80" height="28" rx="5"/>
+  <text class="pinText" x="988" y="574">VCC</text>
+  <rect class="pin" x="1075" y="555" width="80" height="28" rx="5"/>
+  <text class="pinText" x="1094" y="574">DATA</text>
+  <rect class="pin" x="1185" y="555" width="80" height="28" rx="5"/>
+  <text class="pinText" x="1206" y="574">GND</text>
+
+  <!-- Wires LCD -->
+  <path class="wirePower" d="M330 469 C255 469 255 135 505 135 C505 135 505 230 505 230"/>
+  <path class="wireGnd" d="M330 509 C215 509 215 760 505 760 C505 760 505 322 505 322"/>
+  <path class="wireSda" d="M330 549 C255 549 255 366 460 366"/>
+  <path class="wireScl" d="M330 589 C285 589 285 426 460 426"/>
+
+  <!-- Wires DHT -->
+  <path class="wirePower" d="M1005 555 C1005 286 900 286 900 286"/>
+  <path class="wireData" d="M1115 555 C1115 406 900 406 900 406"/>
+  <path class="wireGnd" d="M1225 555 C1225 346 900 346 900 346"/>
+
+  <!-- Connection labels -->
+  <rect class="legendBox" x="70" y="670" width="520" height="145" rx="12"/>
+  <text class="label" x="95" y="705">Baglanti Özeti</text>
+  <text class="small" x="95" y="736">LCD VCC -> ESP32 5V/VIN</text>
+  <text class="small" x="95" y="762">LCD GND -> ESP32 GND</text>
+  <text class="small" x="95" y="788">LCD SDA -> ESP32 GPIO21</text>
+  <text class="small" x="95" y="814">LCD SCL -> ESP32 GPIO22</text>
+
+  <rect class="legendBox" x="810" y="670" width="520" height="145" rx="12"/>
+  <text class="label" x="835" y="705">Sensör Baglantisi</text>
+  <text class="small" x="835" y="736">DHT VCC -> ESP32 3V3</text>
+  <text class="small" x="835" y="762">DHT GND -> ESP32 GND</text>
+  <text class="small" x="835" y="788">DHT DATA -> ESP32 GPIO4</text>
+  <text class="tiny" x="835" y="814">Çiplak 4 pinli DHT sensörde DATA ile VCC arasina 10k direnç eklenebilir.</text>
+
+  <!-- Wire legend -->
+  <line class="wirePower" x1="640" y1="705" x2="705" y2="705"/>
+  <text class="small" x="720" y="711">Besleme</text>
+  <line class="wireGnd" x1="640" y1="740" x2="705" y2="740"/>
+  <text class="small" x="720" y="746">GND</text>
+  <line class="wireSda" x1="640" y1="775" x2="705" y2="775"/>
+  <text class="small" x="720" y="781">SDA</text>
+  <line class="wireScl" x1="640" y1="810" x2="705" y2="810"/>
+  <text class="small" x="720" y="816">SCL</text>
+
+  <text class="tiny" x="70" y="865">Not: LCD I2C adresi çogunlukla 0x27, bazi modüllerde 0x3F olabilir.</text>
+</svg>
